@@ -32,8 +32,13 @@ public class Launcher {
             return;
         }
 
-        Find file = new Find();
-        System.out.println(file.search(new File(directory), fileName, subDirectory));
-
+        if (args.length <=1 || args.length > 4) {
+            System.out.println("Command Line: [-r] [-d directory] filename.txt");
+        } else {
+            Find file = new Find();
+            file.search(new File(directory), fileName, subDirectory);
+            file.roadToFile.forEach(System.out::println);
+            file.roadToFile.clear();
+        }
     }
 }

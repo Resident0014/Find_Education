@@ -4,9 +4,9 @@ import java.util.List;
 
 class Find {
 
-    private ArrayList<File> roadToFile = new ArrayList();
+    public ArrayList<File> roadToFile = new ArrayList<>();
 
-    List<File> search(File dir, String fileName, boolean moreDir) {
+    public List<File> search(File dir, String fileName, boolean moreDir) {
         if (dir.isDirectory()) {
             File[] files = dir.listFiles();
             for (File entry: files) {

@@ -21,6 +21,7 @@ class Test_for_Find {
         Find file = new Find();
         ArrayList<File> files = new ArrayList<>();
         files.add(new File("test/dir/test2.txt"));
+        files.add(new File("test/dir/dir2/test2.txt"));
         assertEquals(files,
                 file.search(new File("test"), "test2.txt", true));
     }
